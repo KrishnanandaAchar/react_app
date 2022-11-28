@@ -25,7 +25,7 @@ const ToDo = (props) => {
         <div className="todo-block my-3 d-flex justify-content-center">
             <div className="todo-title text-center p-3">
                 <FaEdit className="mb-3" />
-                <h2>ToDo App</h2>
+                <h2>ToDo App Git Hub</h2>
                 <small>
                     Maintain our day-to-day tasks. <br /> It is helpful in planning your daily schedules.
                 </small>
