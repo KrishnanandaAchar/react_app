@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+input {
+  outline: 0 !important;
+}
+
+.header-block .nav-item a {
+  color: #ffffff;
+}
+.header-block .nav-item a.active {
+  color: #a4efe8;
+  font-weight: 500;
+}
+
+.world-clock-block {
+  background-image: linear-gradient(to right top, #114eaa, #474db9, #7049c3, #973ec8, #be28c7);
+}
+.world-clock-block .clock-control-block {
+  background-color: #c6c6c6;
+  color: #252525;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 150px;
+}
+.world-clock-block .clock-control-block.active {
+  background-color: #252525;
+  color: #c6c6c6;
+}
+.world-clock-block .time-block div {
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+}
+.world-clock-block .time-block div:last-child {
+  background-color: #c6c6c6;
+  color: #252525;
+}
+@media (max-width: 768px) {
+  .world-clock-block .time-block {
+    margin-top: 10px;
+  }
+  .world-clock-block .time-block div {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .world-clock-block .time-block div {
+    font-size: 20px;
+  }
+}
+.world-clock-block .date-block {
+  font-size: 25px;
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .world-clock-block .date-block {
+    font-size: 22px;
+  }
+}
+
+.counter-block {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+.counter-block .counter div {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  background-color: #59dfc6;
+}
+.counter-block .counter div.incrementBtn {
+  cursor: pointer;
+  margin-left: -20px;
+  border-radius: 0 50% 50% 0;
+}
+.counter-block .counter div.decrementBtn {
+  cursor: pointer;
+  margin-right: -20px;
+  border-radius: 50% 0 0 50%;
+}
+.counter-block .counter div.count {
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #a4efe8;
+}
+.counter-block p {
+  font-weight: 600;
+  color: #660d0d;
+}
+.counter-block button {
+  font-weight: 600;
+}
+
+.todo-block .todo-title {
+  background-color: #f7f793;
+  border-radius: 6px 0 0 6px;
+}
+.todo-block .todo-title svg {
+  font-size: 80px;
+}
+.todo-block .todo-title h2 {
+  font-weight: bold;
+}
+.todo-block .todo {
+  width: 100%;
+  min-width: 350px;
+  max-width: 600px;
+  border-radius: 0 6px 6px 0;
+  background-color: #d0ffc0;
+}
+.todo-block .todo .todo-list {
+  height: 80%;
+  overflow-y: auto;
+  max-height: 500px;
+}
+.todo-block .todo .todo-list input {
+  cursor: pointer;
+}
+.todo-block .todo .todo-list span {
+  font-weight: 600;
+}
+.todo-block .todo .todo-list button {
+  outline: 0;
+  background-color: transparent;
+}
+.todo-block .todo .todo-list button svg {
+  color: #660d0d;
+}
+.todo-block .todo form {
+  background-color: #a5d993;
+  border-radius: 3px;
+}
+.todo-block .todo form input {
+  width: 90%;
+  border-radius: 3px 0 0 3px;
+  border: 2px solid #a5d993;
+}
+.todo-block .todo form button {
+  width: 10%;
+  border-radius: 0 3px 3px 0;
+  background-color: #a5d993;
+  border: 2px solid #a5d993;
+}
+.todo-block .todo form button svg {
+  font-size: 21px;
+  color: #658b58;
+}/*# sourceMappingURL=style.css.map */

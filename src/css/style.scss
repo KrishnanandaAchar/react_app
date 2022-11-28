@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+$white: #ffffff;
+$darkRed: #660d0d;
+$lightGray: #c6c6c6;
+$dullBlack: #252525;
+$lightBlue: #a4efe8;
+$dullGreen: #d0ffc0;
+$darkGreen: #a5d993;
+$drakerGreen: #658b58;
+$dullYellow: #f7f793;
+$lighterBlue: #59dfc6;
+
+* {
+    font-family: "Quicksand", sans-serif;
+}
+input {
+    outline: 0 !important;
+}
+
+.header-block {
+    .nav-item {
+        a {
+            color: $white;
+
+            &.active {
+                color: $lightBlue;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.world-clock-block {
+    background-image: linear-gradient(to right top, #114eaa, #474db9, #7049c3, #973ec8, #be28c7);
+
+    .clock-control-block {
+        background-color: $lightGray;
+        color: $dullBlack;
+        font-weight: 600;
+        cursor: pointer;
+        max-width: 150px;
+
+        &.active {
+            background-color: $dullBlack;
+            color: $lightGray;
+        }
+    }
+
+    .time-block {
+        div {
+            background-color: $dullBlack;
+            color: $white;
+            font-size: 50px;
+            font-weight: 600;
+
+            &:last-child {
+                background-color: $lightGray;
+                color: $dullBlack;
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 10px;
+
+            div {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            div {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .date-block {
+        font-size: 25px;
+        font-weight: 600;
+
+        @media (max-width: 480px) {
+            font-size: 22px;
+        }
+    }
+}
+
+.counter-block {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+    .counter {
+        div {
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            background-color: $lighterBlue;
+
+            &.incrementBtn {
+                cursor: pointer;
+                margin-left: -20px;
+                border-radius: 0 50% 50% 0;
+            }
+            &.decrementBtn {
+                cursor: pointer;
+                margin-right: -20px;
+                border-radius: 50% 0 0 50%;
+            }
+            &.count {
+                z-index: 1;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: $lightBlue;
+            }
+        }
+    }
+
+    p {
+        font-weight: 600;
+        color: $darkRed;
+    }
+
+    button {
+        font-weight: 600;
+    }
+}
+
+.todo-block {
+    .todo-title {
+        background-color: $dullYellow;
+        border-radius: 6px 0 0 6px;
+
+        svg {
+            font-size: 80px;
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+
+    .todo {
+        width: 100%;
+        min-width: 350px;
+        max-width: 600px;
+        border-radius: 0 6px 6px 0;
+        background-color: $dullGreen;
+
+        .todo-list {
+            height: 80%;
+            overflow-y: auto;
+            max-height: 500px;
+
+            input {
+                cursor: pointer;
+            }
+
+            span {
+                font-weight: 600;
+            }
+
+            button {
+                outline: 0;
+                background-color: transparent;
+
+                svg {
+                    color: $darkRed;
+                }
+            }
+        }
+
+        form {
+            background-color: $darkGreen;
+            border-radius: 3px;
+
+            input {
+                width: 90%;
+                border-radius: 3px 0 0 3px;
+                border: 2px solid $darkGreen;
+            }
+
+            button {
+                width: 10%;
+                border-radius: 0 3px 3px 0;
+                background-color: $darkGreen;
+                border: 2px solid $darkGreen;
+
+                svg {
+                    font-size: 21px;
+                    color: $drakerGreen;
+                }
+            }
+        }
+    }
+}
