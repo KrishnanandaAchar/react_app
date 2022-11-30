@@ -93,20 +93,6 @@ const ToDo = (props) => {
                     </div>
                 )}
                 <div className="todo-list flex-grow-1">
-                    {/* {todoData.length > 0 ? (
-                        filteredTodoData?.map((todo) => (
-                            <div key={todo.id} className="mb-1 d-flex align-items-baseline">
-                                <input type="checkbox" checked={todo?.completed} onChange={() => markCompleted(todo.id)} className="mx-1" required />
-                                <span className="flex-grow-1">{todo.todo}</span>
-                                <Button variant="light" className="mx-1 p-0 border-0" onClick={() => handleDeleteTodo(todo.id)}>
-                                    <FaTimesCircle />
-                                </Button>
-                            </div>
-                        ))
-                    ) : (
-                        <h4 className="text-secondary">No Todo Items!</h4>
-                    )} */}
-
                     {todoData.length === 0 ? (
                         <h4 className="text-secondary">No Todo Items!</h4>
                     ) : filteredTodoData.length === 0 ? (

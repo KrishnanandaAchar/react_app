@@ -5,7 +5,11 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 const Header = () => (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="header-block">
         <Container fluid>
-            <Navbar.Brand>React App</Navbar.Brand>
+            <Navbar.Brand>
+                <NavLink to="/" className="text-decoration-none text-white">
+                    React App
+                </NavLink>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ms-auto">

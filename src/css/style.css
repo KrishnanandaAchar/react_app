@@ -106,9 +106,21 @@ input {
 .todo-block .todo-title h2 {
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .todo-block .todo-title svg {
+    font-size: 50px;
+    display: inline-block;
+  }
+  .todo-block .todo-title h2 {
+    font-size: 20px;
+    display: inline-block;
+  }
+  .todo-block .todo-title small {
+    display: none;
+  }
+}
 .todo-block .todo {
   width: 100%;
-  min-width: 350px;
   max-width: 600px;
   border-radius: 0 6px 6px 0;
   background-color: #d0ffc0;
@@ -181,4 +193,14 @@ input {
 .todo-block .todo form button svg {
   font-size: 21px;
   color: #658b58;
+}
+@media (max-width: 992px) {
+  .todo-block .todo {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .todo-block {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
