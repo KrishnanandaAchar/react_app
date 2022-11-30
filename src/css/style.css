@@ -203,4 +203,35 @@ input {
   .todo-block {
     flex-direction: column;
   }
+}
+
+.password-generator-block {
+  background-image: linear-gradient(to right top, #f97683, #ff9273, #ffb368, #ffd669, #f5f97d);
+}
+.password-generator-block .password-controls span {
+  font-weight: 600;
+}
+.password-generator-block .password-block h2 {
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #252525;
+}
+.password-generator-block .password-block button {
+  font-weight: bold;
+}
+.password-generator-block p {
+  color: #660d0d;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .password-generator-block .password-controls span {
+    font-size: 14px;
+  }
+  .password-generator-block .password-block h2 {
+    height: 40px;
+    border-radius: 40px;
+  }
+  .password-generator-block .password-block button {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

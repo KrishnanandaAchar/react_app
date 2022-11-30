@@ -260,3 +260,48 @@ input {
         flex-direction: column;
     }
 }
+
+.password-generator-block {
+    background-image: linear-gradient(to right top, #f97683, #ff9273, #ffb368, #ffd669, #f5f97d);
+
+    .password-controls {
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .password-block {
+        h2 {
+            height: 50px;
+            border-radius: 50px;
+            border: 2px solid $dullBlack;
+        }
+
+        button {
+            font-weight: bold;
+        }
+    }
+
+    p {
+        color: $darkRed;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .password-controls {
+            span {
+                font-size: 14px;
+            }
+        }
+        .password-block {
+            h2 {
+                height: 40px;
+                border-radius: 40px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    }
+}
