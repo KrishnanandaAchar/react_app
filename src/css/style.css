@@ -100,23 +100,76 @@ input {
   background-color: #f7f793;
   border-radius: 6px 0 0 6px;
 }
+@media (max-width: 775px) {
+  .todo-block .todo-title {
+    border-radius: 6px 6px 0 0;
+  }
+}
 .todo-block .todo-title svg {
   font-size: 80px;
 }
 .todo-block .todo-title h2 {
   font-weight: bold;
 }
+.todo-block .todo-title button {
+  color: #ffffff;
+  border-radius: 3px;
+  border: 2px solid #a5d993;
+}
+.todo-block .todo-title button.completeBtn {
+  background-color: #a5d993;
+}
+.todo-block .todo-title button.completeBtn.active {
+  font-weight: bold;
+}
+.todo-block .todo-title button.pendingBtn {
+  background-color: #660d0d;
+}
+.todo-block .todo-title button.pendingBtn.active {
+  font-weight: bold;
+}
+.todo-block .todo-title button.clearBtn {
+  background-color: #252525;
+}
 .todo-block .todo {
   width: 100%;
-  min-width: 350px;
   max-width: 600px;
   border-radius: 0 6px 6px 0;
   background-color: #d0ffc0;
+  flex-direction: column;
+}
+@media (max-width: 775px) {
+  .todo-block .todo {
+    border-radius: 0 0 6px 6px;
+  }
 }
 .todo-block .todo .todo-list {
-  height: 80%;
+  flex-grow: 1;
+  height: 500px;
   overflow-y: auto;
   max-height: 500px;
+}
+@media (max-width: 775px) {
+  .todo-block .todo .todo-list {
+    height: 100%;
+  }
+}
+.todo-block .todo .todo-list::-webkit-scrollbar {
+  width: 10px;
+}
+.todo-block .todo .todo-list::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+.todo-block .todo .todo-list::-webkit-scrollbar-thumb {
+  background-color: #658b58;
+  border-radius: 100px;
+}
+.todo-block .todo .todo-list form.searchBox input {
+  width: 80% !important;
+}
+.todo-block .todo .todo-list form.searchBox Button svg {
+  color: #658b58;
 }
 .todo-block .todo .todo-list input {
   cursor: pointer;

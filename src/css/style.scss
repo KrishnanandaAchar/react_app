@@ -10,6 +10,7 @@ $darkGreen: #a5d993;
 $drakerGreen: #658b58;
 $dullYellow: #f7f793;
 $lighterBlue: #59dfc6;
+$scrollBackground: #e4e4e4;
 
 * {
     font-family: "Quicksand", sans-serif;
@@ -130,6 +131,10 @@ input {
         background-color: $dullYellow;
         border-radius: 6px 0 0 6px;
 
+        @media (max-width: 775px) {
+            border-radius: 6px 6px 0 0;
+        }
+
         svg {
             font-size: 80px;
         }
@@ -137,19 +142,78 @@ input {
         h2 {
             font-weight: bold;
         }
+
+        button {
+            color: $white;
+            border-radius: 3px;
+            border: 2px solid $darkGreen;
+
+            &.completeBtn {
+                background-color: $darkGreen;
+
+                &.active {
+                    font-weight: bold;
+                }
+            }
+            &.pendingBtn {
+                background-color: $darkRed;
+
+                &.active {
+                    font-weight: bold;
+                }
+            }
+            &.clearBtn {
+                background-color: $dullBlack;
+            }
+        }
     }
 
     .todo {
         width: 100%;
-        min-width: 350px;
         max-width: 600px;
         border-radius: 0 6px 6px 0;
         background-color: $dullGreen;
+        flex-direction: column;
+
+        @media (max-width: 775px) {
+            border-radius: 0 0 6px 6px;
+        }
 
         .todo-list {
-            height: 80%;
+            flex-grow: 1;
+            height: 500px;
             overflow-y: auto;
             max-height: 500px;
+
+            @media (max-width: 775px) {
+                height: 100%;
+            }
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: $scrollBackground;
+                border-radius: 100px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $drakerGreen;
+                border-radius: 100px;
+            }
+
+            form.searchBox {
+                input {
+                    width: 80% !important;
+                }
+
+                Button {
+                    svg {
+                        color: $drakerGreen;
+                    }
+                }
+            }
 
             input {
                 cursor: pointer;
