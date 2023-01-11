@@ -3,6 +3,7 @@
 $white: #ffffff;
 $darkRed: #660d0d;
 $lightGray: #c6c6c6;
+$thinGray: #dedede;
 $dullBlack: #252525;
 $lightBlue: #a4efe8;
 $dullGreen: #d0ffc0;
@@ -253,6 +254,29 @@ input {
                     font-size: 21px;
                     color: $drakerGreen;
                 }
+            }
+        }
+    }
+}
+
+.user-block {
+    background-color: $lightGray;
+
+    .user-box {
+        background-color: $thinGray;
+        flex-grow: 0;
+        flex-basis: 15%;
+
+        @media (max-width: 767px) {
+            flex-basis: 100%;
+        }
+
+        p {
+            margin: 0;
+            &:last-child {
+                background-color: $lightGray;
+                border-radius: 3px;
+                padding: 0 10px;
             }
         }
     }

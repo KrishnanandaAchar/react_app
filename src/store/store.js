@@ -1,11 +1,15 @@
 // 3rd Party Libraries
-import thunk from "redux-thunk";
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 
 // Reducers
-import { ToDoData } from "./reducers";
+import { todoSlice } from "./features/todoSlice";
+import { userSlice } from "./features/userSlice";
 
-const rootReducers = combineReducers({ ToDoData });
-const store = createStore(rootReducers, applyMiddleware(thunk));
+const store = configureStore({
+    reducer: {
+        ToDoData: todoSlice.reducer,
+        UserData: userSlice.reducer,
+    },
+});
 
 export default store;

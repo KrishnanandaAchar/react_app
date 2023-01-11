@@ -202,4 +202,26 @@ input {
 .todo-block .todo form button svg {
   font-size: 21px;
   color: #658b58;
+}
+
+.user-block {
+  background-color: #c6c6c6;
+}
+.user-block .user-box {
+  background-color: #dedede;
+  flex-grow: 0;
+  flex-basis: 15%;
+}
+@media (max-width: 767px) {
+  .user-block .user-box {
+    flex-basis: 100%;
+  }
+}
+.user-block .user-box p {
+  margin: 0;
+}
+.user-block .user-box p:last-child {
+  background-color: #c6c6c6;
+  border-radius: 3px;
+  padding: 0 10px;
 }/*# sourceMappingURL=style.css.map */

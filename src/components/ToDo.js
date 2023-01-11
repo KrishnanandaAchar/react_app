@@ -1,4 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
+
 import { useEffect, useRef, useState } from "react";
 
 // Props Type Check
@@ -11,10 +12,11 @@ import { FaEdit, FaPlusCircle, FaTimesCircle, FaSistrix } from "react-icons/fa";
 import { RenderButton } from "../utils/common";
 
 const ToDo = (props) => {
-    const { todoData, addTodo, deleteTodo, updateTodoCheck } = props;
+    const { dispatch, todoData: todoDataObj, addTodo, deleteTodo, updateTodoCheck } = props;
+    const todoData = todoDataObj?.value;
     const [searchKey, setSearchKey] = useState("");
-    const [searchStatus, setSearchStatus] = useState(null);
     const [filteredTodo, setFilteredTodo] = useState([]);
+    const [searchStatus, setSearchStatus] = useState(null);
 
     const searchKeyRef = useRef();
     const todoContent = useRef();
@@ -34,7 +36,7 @@ const ToDo = (props) => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        addTodo({ id: new Date().getTime().toString(), todo: todoContent.current.value, completed: false });
+        dispatch(addTodo({ id: new Date().getTime().toString(), todo: todoContent.current.value, completed: false }));
         todoContent.current.value = "";
     };
 
@@ -66,7 +68,7 @@ const ToDo = (props) => {
                         />
                     </div>
                     <div>
-                        <RenderButton variant="light" type="button" className="clearBtn w-100 px-2 py-0 border-0" buttonTitle="Clear Completed" onClick={() => setSearchStatus(null)} />
+                        <RenderButton variant="light" type="button" className="clearBtn w-100 px-2 py-0 border-0" buttonTitle="Clear Filter" onClick={() => setSearchStatus(null)} />
                     </div>
                 </div>
             </div>
@@ -82,9 +84,9 @@ const ToDo = (props) => {
                             {filteredTodo.length > 0 ? (
                                 filteredTodo.map((todo) => (
                                     <div key={todo.id} className="mb-1 d-flex align-items-baseline">
-                                        <input type="checkbox" checked={todo.completed} className="mx-1" onChange={() => updateTodoCheck(todo.id)} required />
+                                        <input type="checkbox" checked={todo.completed} className="mx-1" onChange={() => dispatch(updateTodoCheck(todo.id))} required />
                                         <span className="flex-grow-1">{todo.todo}</span>
-                                        <RenderButton variant="light" type="button" className="mx-1 p-0 border-0" buttonTitle={<FaTimesCircle />} onClick={() => deleteTodo(todo.id)} />
+                                        <RenderButton variant="light" type="button" className="mx-1 p-0 border-0" buttonTitle={<FaTimesCircle />} onClick={() => dispatch(deleteTodo(todo.id))} />
                                     </div>
                                 ))
                             ) : (
@@ -105,10 +107,11 @@ const ToDo = (props) => {
 };
 
 ToDo.propTypes = {
-    todoData: PropTypes.array.isRequired,
+    todoData: PropTypes.object.isRequired,
     addTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
     updateTodoCheck: PropTypes.any.isRequired,
+    dispatch: PropTypes.func.isRequired,
 };
 
 export default ToDo;
