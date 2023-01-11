@@ -2,6 +2,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 
 // Components
+import Users from "../components/Users";
 import Counter from "../components/Counter";
 import WorldClock from "../components/WorldClock";
 
@@ -18,6 +19,11 @@ const Home = () => (
             </Col>
             <Col>Hello</Col>
             <Col>World!</Col>
+        </Row>
+        <Row>
+            <Col>
+                <Users />
+            </Col>
         </Row>
     </Container>
 );
