@@ -24,6 +24,11 @@ const Header = () => (
                             Posts
                         </NavLink>
                     </Nav.Item>
+                    <Nav.Item>
+                        <NavLink to="/shapeGenerator" className="mx-1 text-decoration-none" activeclassname="active">
+                            Shape Generator
+                        </NavLink>
+                    </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Container>

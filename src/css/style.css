@@ -286,4 +286,35 @@ input {
   width: 100%;
   max-width: 400px;
   border-radius: 3px;
+}
+
+.shape-generator-block h1 {
+  border-radius: 3px;
+  background-color: #658b58;
+}
+.shape-generator-block .undoBtn {
+  background-color: #660d0d;
+}
+.shape-generator-block .redoBtn {
+  background-color: #a5d993;
+}
+.shape-generator-block .screen {
+  height: 500px;
+  border-radius: 3px;
+  position: relative;
+  background-color: #252525;
+}
+.shape-generator-block .screen .point {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+.shape-generator-block .screen .circle {
+  border-radius: 50%;
+}
+.shape-generator-block .screen .roundedSquare {
+  border-radius: 3px;
+}
+.shape-generator-block .screen .rectangle {
+  width: 100px;
 }/*# sourceMappingURL=style.css.map */
