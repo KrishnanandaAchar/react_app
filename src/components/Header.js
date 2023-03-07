@@ -19,6 +19,11 @@ const Header = () => (
                             ToDo
                         </NavLink>
                     </Nav.Item>
+                    <Nav.Item>
+                        <NavLink to="/posts" className="mx-1 text-decoration-none" activeclassname="active">
+                            Posts
+                        </NavLink>
+                    </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Container>

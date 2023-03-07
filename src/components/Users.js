@@ -2,13 +2,25 @@ import { useEffect, useState } from "react";
 
 // 3rd Party Libraries
 import { Form } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { showAlert } from "../store/features/alertSlice";
+import { startLoading, stoploading } from "../store/features/loaderSlice";
 
 const Users = () => {
+    const dispatch = useDispatch();
     const userData = useSelector((state) => state.UserData?.data || []);
+    const isLoading = useSelector((state) => state.UserData?.loading);
+    const isError = useSelector((state) => state.UserData?.errorMessage);
     const [searchKey, setSearchKey] = useState("");
     const [filteredUserData, setFilteredUserData] = useState([]);
 
+    useEffect(() => {
+        if (isLoading) {
+            dispatch(startLoading());
+        } else {
+            dispatch(stoploading());
+        }
+    }, [isLoading]);
     useEffect(() => {
         setFilteredUserData(userData);
     }, [userData]);
@@ -18,6 +30,11 @@ const Users = () => {
         }, 1000);
         return () => clearTimeout(debounceUserSearch);
     }, [searchKey, userData]);
+    useEffect(() => {
+        if (!isLoading && isError !== "") {
+            dispatch(showAlert({ type: "error", msg: "Failed To Fetch" }));
+        }
+    }, [isError]);
 
     const handleSearch = (e) => setSearchKey(e.target.value);
 

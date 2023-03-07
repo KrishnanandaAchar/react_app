@@ -7,6 +7,17 @@ import PropTypes from "prop-types";
 // 3rd Party Libraries
 import { Button } from "react-bootstrap";
 
+// Images
+import loader from "../images/loader.gif";
+
+// Loader
+export const Loader = () => (
+    <div className="w-100 vh-100 position-fixed d-flex justify-content-center align-items-center loader">
+        <img className="d-block loaderImage" src={loader} alt="Loading..." />
+    </div>
+);
+
+// Button
 export const RenderButton = (props) => {
     const { variant, type, className, buttonTitle, onClick } = props;
 

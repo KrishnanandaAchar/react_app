@@ -7,6 +7,15 @@ input {
   outline: 0 !important;
 }
 
+.loader {
+  z-index: 99999;
+  background-color: #ffffff;
+}
+.loader .loaderImage {
+  width: 100%;
+  max-width: 500px;
+}
+
 .header-block .nav-item a {
   color: #ffffff;
 }
@@ -224,4 +233,57 @@ input {
   background-color: #c6c6c6;
   border-radius: 3px;
   padding: 0 10px;
+}
+
+.posts-block h1 {
+  color: #252525;
+  border-radius: 3px;
+  background-color: #eb8181;
+}
+.posts-block h1 button:first-child {
+  border-color: #b35755;
+  background-color: #b35755;
+}
+.posts-block h1 button:last-child {
+  border-color: #b35755;
+  background-color: #b35755;
+}
+.posts-block .post-block {
+  border-radius: 3px;
+  background-color: #8bb9f5;
+}
+.posts-block .post-block h3 {
+  width: 15ch;
+  font-size: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.posts-block .post-block button {
+  padding: 0 10px;
+  border-radius: 0;
+  color: #252525;
+}
+.posts-block .post-block button:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.posts-block .post-block button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+.posts-block .post-block button svg {
+  font-size: 14px;
+}
+
+.post-details-block h1 {
+  border-radius: 3px;
+  background-color: #a5d993;
+}
+.post-details-block h1 button {
+  color: #ffffff;
+  background-color: #658b58;
+  border: 1px solid #658b58;
+}
+.post-details-block img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 3px;
 }/*# sourceMappingURL=style.css.map */
