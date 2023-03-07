@@ -17,6 +17,7 @@ import PostsPage from "./pages/PostsPage";
 import ShowAlert from "./components/ShowAlert";
 import PageNotFound from "./pages/PageNotFound";
 import PostDetailsPage from "./pages/PostDetailsPage";
+import ShapeGeneratorPage from "./pages/ShapeGeneratorPage";
 
 const MainPage = () => {
     const loadingStatus = useSelector((state) => state.LoaderStatus.value);
@@ -37,6 +38,7 @@ const MainPage = () => {
                     <Route path="/todo" element={<ToDoPage />} />
                     <Route path="/posts" element={<PostsPage />} />
                     <Route path="/posts/:id" element={<PostDetailsPage />} />
+                    <Route path="/shapeGenerator" element={<ShapeGeneratorPage />} />
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
             </Routers>

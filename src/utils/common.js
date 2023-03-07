@@ -19,10 +19,10 @@ export const Loader = () => (
 
 // Button
 export const RenderButton = (props) => {
-    const { variant, type, className, buttonTitle, onClick } = props;
+    const { variant, type, className, buttonTitle, onClick, disabled = false } = props;
 
     return (
-        <Button variant={variant} type={type} className={className} onClick={onClick}>
+        <Button variant={variant} type={type} className={className} onClick={onClick} disabled={disabled}>
             {buttonTitle}
         </Button>
     );
@@ -33,5 +33,6 @@ RenderButton.propTypes = {
     type: PropTypes.string,
     className: PropTypes.string,
     onClick: PropTypes.func,
+    disabled: PropTypes.bool,
     buttonTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };

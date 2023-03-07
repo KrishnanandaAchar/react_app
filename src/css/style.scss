@@ -362,3 +362,43 @@ input {
         border-radius: 3px;
     }
 }
+
+.shape-generator-block {
+    h1 {
+        border-radius: 3px;
+        background-color: $drakerGreen;
+    }
+
+    .undoBtn {
+        background-color: $darkRed;
+    }
+
+    .redoBtn {
+        background-color: $darkGreen;
+    }
+
+    .screen {
+        height: 500px;
+        border-radius: 3px;
+        position: relative;
+        background-color: $dullBlack;
+
+        .point {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .roundedSquare {
+            border-radius: 3px;
+        }
+
+        .rectangle {
+            width: 100px;
+        }
+    }
+}
